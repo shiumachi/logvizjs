@@ -192,23 +192,23 @@ $(function() {
 
 	/* Ack. JS can't decide on a single test framework, so I had to write my own? */
 	var testSomeStuff = function() {
-		var sample = "2012-04-22 10:19:36,793  INFO A1234\n2012-04-22 10:29:36,793  INFO A2345\n";
-		var parsed = parseLogFile(sample);
-
-		assertEquals(
-			  '{"minDate":"2012-05-22T17:19:36.000Z",'
-			+ '"maxDate":"2012-05-22T17:29:36.000Z",'
-			+ '"logLines":[{"date":"2012-05-22T17:19:36.000Z","msg":" INFO A1234"},' 
-			+ '{"date":"2012-05-22T17:29:36.000Z","msg":" INFO A2345"}]}',
-			JSON.stringify(parsed));
-
-		assertEquals(
-			"<ip> abcNN NN",
-			normalizeLogMessage("1.1.1.2 abc123 4"));
-
-		assertEquals(
-			1356915600000,
-			roundDate(new Date(1356917825836), 1000*60*60).getTime());
+		//var sample = "2012-04-22 10:19:36,793  INFO A1234\n2012-04-22 10:29:36,793  INFO A2345\n";
+		//var parsed = parseLogFile(sample);
+		//
+		//assertEquals(
+		//	  '{"minDate":"2012-05-22T17:19:36.000Z",'
+		//	+ '"maxDate":"2012-05-22T17:29:36.000Z",'
+		//	+ '"logLines":[{"date":"2012-05-22T17:19:36.000Z","msg":" INFO A1234"},' 
+		//	+ '{"date":"2012-05-22T17:29:36.000Z","msg":" INFO A2345"}]}',
+		//	JSON.stringify(parsed));
+		//
+		//assertEquals(
+		//	"<ip> abcNN NN",
+		//	normalizeLogMessage("1.1.1.2 abc123 4"));
+		//
+		//assertEquals(
+		//	1356915600000,
+		//	roundDate(new Date(1356917825836), 1000*60*60).getTime());
 	};
 
 	var parseAndShow = function(text) {
